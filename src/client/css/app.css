@@ -1,0 +1,252 @@
+@font-face {
+  font-family: 'Grand Hotel';
+  src: url("../../assets/fonts/Grand_Hotel/GrandHotel-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../assets/fonts/Merriweather/Merriweather-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../../assets/fonts/Open_Sans/OpenSans-Regular.ttf"); }
+
+body {
+  background-color: #7B1FA2;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  font-family: 'Merriweather'; }
+
+header {
+  background-color: #4A148C;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99998;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-app-region: drag;
+  box-shadow: 0 0 20px #333; }
+  header h1 {
+    order: 0;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Grand Hotel';
+    font-weight: 100; }
+  header div.buttons {
+    order: 1;
+    -webkit-app-region: no-drag;
+    position: relative; }
+    header div.buttons i {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      transition: all 0.25s;
+      height: 30px;
+      width: 30px;
+      line-height: 32px;
+      margin-right: -5px;
+      display: inline-block; }
+      header div.buttons i:hover {
+        background-color: #D32F2F;
+        border-radius: 100%; }
+
+div.container {
+  box-sizing: border-box;
+  width: 100%;
+  top: 50px;
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  overflow: hidden; }
+  div.container h1 {
+    margin: 0; }
+
+div.welcome {
+  text-align: center;
+  padding: 12px; }
+  div.welcome h1 {
+    color: #BA68C8;
+    margin: 0; }
+  div.welcome h2 {
+    color: #E1BEE7;
+    font-size: 20px;
+    font-weight: 100; }
+  div.welcome button {
+    background-color: #56209C;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 0 30px 4px #581283;
+    margin: 10px 0;
+    transition: all 0.5s; }
+    div.welcome button:hover {
+      background-color: #6330A5;
+      transform: scale(1.12); }
+
+div.app {
+  width: 100%;
+  overflow: hidden; }
+  div.app div.add-modal-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    position: fixed; }
+  div.app div.add-modal {
+    position: relative;
+    top: -50px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    div.app div.add-modal div.content {
+      position: fixed;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      z-index: 101;
+      background-color: #56209C;
+      box-shadow: 0 0 40px #303030; }
+      div.app div.add-modal div.content i {
+        top: -30px;
+        right: 3px;
+        color: #fff;
+        text-align: right;
+        font-size: 22px;
+        position: absolute;
+        transition: color 0.3s;
+        cursor: pointer; }
+        div.app div.add-modal div.content i:hover {
+          color: #aaa; }
+      div.app div.add-modal div.content input {
+        background-color: #56209C;
+        color: #fff;
+        border: 0;
+        padding: 10px;
+        outline: none;
+        height: 30px;
+        font-family: 'Merriweather'; }
+        div.app div.add-modal div.content input::-webkit-input-placeholder {
+          color: #8A51DB; }
+      div.app div.add-modal div.content button {
+        height: 40px;
+        font-weight: 800;
+        font-size: 16px;
+        text-transform: uppercase;
+        outline: none;
+        border: 0;
+        transition: background-color 0.5s;
+        font-family: 'Open Sans'; }
+        div.app div.add-modal div.content button.save {
+          background-color: #41107E;
+          color: #fff; }
+          div.app div.add-modal div.content button.save:hover {
+            background-color: #380F70; }
+          div.app div.add-modal div.content button.save:focus {
+            background-color: #2D0B64; }
+        div.app div.add-modal div.content button.remove {
+          background-color: #BE0F0F;
+          color: #fff; }
+          div.app div.add-modal div.content button.remove:hover {
+            background-color: #A00A0A; }
+          div.app div.add-modal div.content button.remove:focus {
+            background-color: #880909; }
+  div.app div.bar {
+    margin: 12px;
+    display: flex;
+    justify-content: space-between; }
+    div.app div.bar p {
+      font-size: 11px;
+      color: #26083B;
+      margin: 0;
+      text-align: center;
+      height: 20px;
+      line-height: 20px; }
+    div.app div.bar button {
+      background-color: #4A148C;
+      color: #eee;
+      outline: none;
+      border: 0;
+      font-size: 13px;
+      padding: 0 10px;
+      border-radius: 10px;
+      height: 20px;
+      transition: box-shadow 0.3s;
+      cursor: pointer; }
+      div.app div.bar button:hover {
+        box-shadow: 0 0 7px #581283; }
+  div.app div.list {
+    margin: 0;
+    max-height: calc(100vh - 95px);
+    overflow-y: scroll; }
+    div.app div.list::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      display: none; }
+    div.app div.list div.info {
+      font-size: 13px;
+      color: #BA68C8;
+      text-align: center;
+      margin: 20px 0; }
+    div.app div.list div.empty {
+      font-size: 20px;
+      color: #BA68C8;
+      text-align: center;
+      margin: 0 auto;
+      height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    div.app div.list div.item {
+      background-color: #4A148C;
+      height: 50px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #555;
+      transition: all 0.3s;
+      box-sizing: border-box;
+      padding: 7px;
+      cursor: pointer;
+      position: relative;
+      margin: 15px 12px; }
+      div.app div.list div.item h1 {
+        font-size: 14px;
+        color: #C5A4FA;
+        margin: 0;
+        font-weight: 600; }
+      div.app div.list div.item h2 {
+        font-size: 10px;
+        color: #B286FA;
+        margin: 5px 0 0; }
+      div.app div.list div.item i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: #fff;
+        transition: color 0.3s; }
+        div.app div.list div.item i:hover {
+          color: #bbb; }
+      div.app div.list div.item:hover {
+        background-color: #5A299B;
+        transform: scale(1.02);
+        box-shadow: 0 0 30px #555; }
